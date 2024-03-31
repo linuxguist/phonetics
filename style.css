@@ -1,0 +1,151 @@
+body {
+  background: linear-gradient(to bottom, #70b0ff, #1f84ff, #005ccc);
+  background-repeat: no-repeat;
+}
+
+.results-div {
+  height: 100%;
+  padding-left: 10px;
+  background-color: violet;
+  background: linear-gradient(to bottom, #70b0ff, #1f84ff, #005ccc);
+  background-repeat: no-repeat;
+}
+
+.sf {
+  background-color: #6f00fe;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  display: flex;
+}
+
+table, th, td {
+border: 1px solid black;  // changing-colors
+// word-wrap: break-word;
+}
+
+// tr:first-child {
+//  font-weight: bold;
+// }
+
+tr:nth-child(even) {background: springgreen}  // changing-colors
+tr:nth-child(odd) {background: springgreen;}   // changing-colors
+
+* {
+  box-sizing: border-box;
+}
+
+#big-char {
+  text-indent: 14px;
+  background-image: url("https://cdn.jsdelivr.net/gh/linuxguist/files@main/type2.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  width: 94%;
+  font-size: 16px;
+  padding: 8px 20px 8px 40px;
+  border:2px solid Tomato;  // changing-colors
+  margin-bottom: 18px;
+  border-radius: 25px;
+  margin: auto;
+}
+
+#myTable {
+  border-collapse: collapse;
+  border: 1px solid #ddd;  // changing-colors
+  width: 100%;
+  margin-top: 18px;
+  // Remove the // in front of the below two lines, to get fixed-width
+  // table-layout: fixed;
+  // word-wrap: break-word;
+  // font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;  // changing-colors
+}
+
+#myTable tr:first-child:hover, #myTable tr:hover {
+  background-color: aqua;    // changing-colors
+}
+
+// #myTable tr:first-child {
+//  background-color: DarkKhaki;    // changing-colors
+//  font-weight: bold;
+// }
+
+#myTable th {
+  background-color: khaki;    // changing-colors
+}
+
+pre {
+  display: block;
+  font-family: verdana, Consolas,"courier new";
+  color: white; 
+  background-color: dodgerblue;
+  // padding: 10px;
+  // font-size: 105%;
+  white-space: pre;
+  // margin: 1em 0;
+  border:1px solid #99cc44; 
+  border-left:10px solid #99cc44;  
+  -webkit-border-radius: 25px; 
+  border-radius: 25px;
+  word-wrap: normal;
+  // overflow: scroll;
+  overflow: auto;
+  width: 100%;
+  max-height: 200px;
+}
+
+* {
+ font-family: verdana, monospace, 'Open Sans', Helvetica, sans-serif;
+ font-size: 16px;
+}
+
+img {
+    // max-width: 100%;
+    // height: auto;
+    }
+
+iframe, object, embed{max-width: 100%;}
+
+.ANCHORS{
+       margin-bottom: 80px;
+       display:inline-block;
+      }
+
+i.fa {
+    // vertical-align: middle;
+    // transform: scale(0.5,1);   
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // max-width: 10px;
+  // height: 200px;
+  // border: 2px solid salmon;
+     padding: 0px;
+}    
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper>iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

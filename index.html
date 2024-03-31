@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <title>Dynamic Nato / ITU / ICAO Phonetic Alphabet &amp; Number Pronouncer</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+<audio preload="auto">
+		<source id="oggSource" src="sounds/ogg/like-glass.ogg" type="audio/ogg">
+		<source id="mp3Source" src="sounds/mp3/like-glass.mp3" type="audio/mp3">
+		Oops! Looks like you're using an old browser, try using a modern browser like Google Chrome, Firefox or even Safari.
+	</audio>
+
+
+<div class="container-fluid">
+
+<center><h1 style="font-size: 40px">Dynamic Nato / ITU / ICAO Phonetic Alphabet &amp; Number Pronouncer</h1></center>
+
+  <div class="row p-1 sf">
+    <input type="search" id="big-char" class='form-control input-lg' placeholder="Type text to convert" title="Type text to convert" class="form-control" autofocus="autofocus">
+  </div>
+  <div class="row p-1">
+    
+    <div class="results-div" id='results-div'>  
+    
+    <table class="table" id="myTable">
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script  src="./script.js"></script>
+
+</body>
+</html>
