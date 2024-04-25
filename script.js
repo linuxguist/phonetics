@@ -1,4 +1,4 @@
-const alphabet = {"a":"ALPHA","b":"BRAVO","c":"CHARLIE","d":"DELTA","e":"ECHO","f":"FOXTROT","g":"GOLF","h":"HOTEL","i":"INDIA","j":"JULIET","k":"KILO","l":"LIMA","m":"MIKE","n":"NOVEMBER","o":"OSCAR","p":"PAPA","q":"QUEBEC","r":"ROMEO","s":"SIERRA","t":"TANGO","u":"UNIFORM","v":"VICTOR","w":"WHISKEY","x":"X","y":"YANKEE","z":"ZULU","0":"ZERO","1":"WUN","2":"TOO","3":"TREE","4":"FOWer","5":"FIFE","6":"SIX","7":"SEVen","8":"AIT","9":"NINer"}
+const alphabet = {"a":"ALPHA","b":"BRAVO","c":"CHARLIE","d":"DELTA","e":"ECHO","f":"FOXTROT","g":"GOLF","h":"HOTEL","i":"INDIA","j":"JULIET","k":"KILO","l":"LIMA","m":"MIKE","n":"NOVEMBER","o":"OSCAR","p":"PAPA","q":"QUEBEC","r":"ROMEO","s":"SIERRA","t":"TANGO","u":"UNIFORM","v":"VICTOR","w":"WHISKEY","x":"X-RAY","y":"YANKEE","z":"ZULU","0":"ZERO","1":"WUN","2":"TOO","3":"TREE","4":"FOWer","5":"FIFE","6":"SIX","7":"SEVen","8":"AIT","9":"NINer"}
 
 function row(i, c) {
   const r = alphabet[c] || c
@@ -12,7 +12,7 @@ function row(i, c) {
   
 }
 
-function changeEventHandler(event) {
+function changeEventHandler() {
   const tbody = document.getElementsByTagName('tbody')[0]
   tbody.innerHTML = ''
   for (let i = 0, l = event.target.value.length; i < l; i++) {
@@ -21,7 +21,7 @@ function changeEventHandler(event) {
 }
 
 function loadEventHandler() {
-  document.getElementsByTagName('input')[0].oninput = changeEventHandler
+  document.getElementsByTagName('input')[0].oninput = changeEventHandler;
 }
 
 // https://plainjs.com/javascript/events/running-code-when-the-document-is-ready-15/
@@ -39,15 +39,15 @@ else if (document.addEventListener) document.addEventListener('DOMContentLoaded'
   function setLetterSound(letterVariable) {
     var mp3Source = document.getElementById('mp3Source');
     var oggSource = document.getElementById('oggSource');
-    mp3Source.src = 'https://cdn.jsdelivr.net/gh/linuxguist/files@main/natoii/' + letterVariable +'.mp3';
-    oggSource.src = 'https://cdn.jsdelivr.net/gh/linuxguist/files@main/natoii/' + letterVariable +'.ogg';
+    mp3Source.src = 'sounds/' + letterVariable +'.mp3';
+    oggSource.src = 'sounds/' + letterVariable +'.ogg';
   }
 
   function setGenericSound() {
     var mp3Source = document.getElementById('mp3Source');
     var oggSource = document.getElementById('oggSource');
-    mp3Source.src = 'https://cdn.jsdelivr.net/gh/linuxguist/files@main/like-glass.mp3';
-    oggSource.src = 'https://cdn.jsdelivr.net/gh/linuxguist/files@main/like-glass.ogg';
+    mp3Source.src = 'sounds/like-glass.mp3';
+    oggSource.src = 'sounds/like-glass.ogg';
   }
 
   // Generating a new element to restart the CSS3 animation.
@@ -84,7 +84,7 @@ else if (document.addEventListener) document.addEventListener('DOMContentLoaded'
   document.onkeypress = function(event){ // Do stuff when you press any key in the document
 
     letterOnScreen = document.getElementById('big-char'); // get the element properties
-    console.log(event.charCode);
+    // console.log(event.charCode);
     if ( // if use pressed on any of these characters which are not numbers or letters
       event.charCode === 13||
       event.charCode === 32||
@@ -145,6 +145,7 @@ else if (document.addEventListener) document.addEventListener('DOMContentLoaded'
       changeEventHandler();
     }
 
+    /*
     // An easter egg, if you type my name
     myName += String.fromCharCode(event.charCode);
     console.log(myName);
@@ -152,6 +153,7 @@ else if (document.addEventListener) document.addEventListener('DOMContentLoaded'
       alert('You typed my name!\n--------------------------------\nNow I will show you my website.');
       window.open('http://mahdif.com','_blank');
     }
+    */
 
   }
 
